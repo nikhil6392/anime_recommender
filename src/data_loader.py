@@ -5,7 +5,7 @@ class AnimeDataLoader:
         self.original_csv = original_csv
         self.processed_csv = processed_csv
 
-    def loaf_and_process(self):
+    def load_and_process(self):
         df = pd.read_csv(self.original_csv, encoding='utf-8', error_bad_lines=False).dropna()
 
         required_cols = ('Name', 'Genres', "sypnopsis")
